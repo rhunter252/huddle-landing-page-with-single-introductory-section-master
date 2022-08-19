@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --color-violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  background: url(./images/bg-desktop.svg) no-repeat center/cover;
+  background-color: var(--color-violet);
+  color: white;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.wrapper {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header img {
+  width: 190px;
+  padding-bottom: 20px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.attribution {
+  text-align: center;
+  flex-direction: row;
+  align-self: flex-end;
+}
+
+.button {
+  background-image: linear-gradient(
+    92.88deg,
+    #455eb5 9.16%,
+    #5643cc 43.89%,
+    #673fd7 64.72%
+  );
+  border-radius: 10px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 240px;
+  font-size: 20px;
+  font-weight: 500;
+  height: 3rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all 0.5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.button:hover {
+  background-image: linear-gradient(
+    92.88deg,
+    #454bb5 19.16%,
+    #7743cc 53.89%,
+    #7c3fd7 44.72%
+  );
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: 0.1s;
+}
+
+.social {
+  text-align: right;
+}
+
+.social a i {
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+}
+
+.social a:not(:first-child) {
+  margin-left: 2rem;
+}
+
+.social a i::after {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  left: -15px;
+  bottom: -13px;
+  transition: all 0.3s ease;
+}
+
+.social a:nth-child(2) {
+  margin-left: 2.4rem;
+}
+
+.social a:hover i {
+  color: hsl(300, 69%, 71%);
+}
+
+.social a i:hover::after {
+  border-color: hsl(300, 69%, 71%);
+}
+
+@media only screen and (max-width: 1440px) {
+  .hero-img img {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .hero-text h1 {
+    line-height: 1.5;
+    font-size: 26px;
+  }
+
+  .hero-text a {
+    padding: 10px 70px;
+  }
+}
